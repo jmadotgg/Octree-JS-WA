@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<title>hello-wasm example</title>
+</head>
+
+<body>
+	<script type="module">
+		import {runJs} from './octree_js.js';
+		import init, {run_wa} from "./pkg/octree.js";
+		const size = 5_000_000;
+
+		const timeStart = performance.now();
+		console.log(runJs(size));
+		console.log(performance.now() - timeStart);
+
+		init().then(() => {
+			const timeStart = performance.now();
+			console.log(run_wa(size));
+			console.log(performance.now() - timeStart);
+		});
+
+	</script>
+</body>
+
+</html>

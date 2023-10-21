@@ -1,0 +1,12 @@
+{
+  "name": "octree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bench.js",
+  "scripts": {
+    "test": "node bench.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
